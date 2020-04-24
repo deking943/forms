@@ -1,0 +1,109 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background-image: url(./imgs/pexels-photo-1342460.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.banner{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  justify-items: center;
+  
+  
+}
+
+h1{
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  animation-name: moveLeft;
+  animation-duration: 2s;
+  
+  
+}
+
+p{
+  font-size: 25px;
+  font-style: italic;
+  font-weight: bold;
+  letter-spacing: 3px;
+  animation-name: moveRight;
+  animation-duration: 2s;
+}
+
+button{
+  width: 150px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5%;
+  margin: 10px;
+  padding: 12px;
+  background-color: blue;
+  color: white;
+  letter-spacing: 1px;
+  cursor: pointer;
+  outline: none;
+  animation-name: animatBtn;
+  animation-duration: 1s;
+  
+  
+}
+
+.right-btn{
+  background-color: transparent;
+  animation-fill-mode: backwards;
+  animation-delay: 1.5s;
+  
+}
+
+.left-btn{
+  background-color: blue;
+  animation-fill-mode: backwards;
+  animation-delay: 2.5s;
+
+}
+
+@keyframes moveLeft{
+  0% {
+    transform: translateX(120px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+}
+
+@keyframes moveRight{
+  0% {
+    transform: translateX(-120px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+}
+
+@keyframes animatBtn{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
